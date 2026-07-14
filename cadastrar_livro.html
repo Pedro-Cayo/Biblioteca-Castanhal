@@ -5,14 +5,14 @@
         <title> Cadastrando_Livro </title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-
         <a href="index.html">
             <button type="button">Voltar ao Início</button>
         </a>
-
     <body>
         <h1>Novo Livro</h1>
-        <form action="cadastrar_livro.php" method="post"> 
+
+        <form action="#" method="post"
+        onsubmit="return validaForm()"> <!--Chamada da função de validação do formulário após a tentativa de envio do mesmo-->
             <fieldset>
                 <legend><strong> Informações Cadastrais </strong></legend>
                 <!--Utilizei <div> somada a uma configuração no arquivo css para auxiliar na formatação do formulário-->
@@ -45,10 +45,11 @@
                     <label for="pagLivro"> Número de Páginas: </label>
                     <input type="text" name="pagLivro" id="pagLivro">
                 </div>             
-             </fieldset>
+            </fieldset>
             <br>
             <button type="submit">Enviar</button>
             <button type="reset">Limpar</button>
         </form>
+        <script src="js/validacao.js"></script>
     </body>
 </html>
