@@ -12,7 +12,7 @@
 
     <body>
         <h1>Novo Livro</h1>
-        <form action="#" method="post"> 
+        <form action="cadastrar_livro.php" method="post"> 
             <fieldset>
                 <legend><strong> Informações Cadastrais </strong></legend>
                 <!--Utilizei <div> somada a uma configuração no arquivo css para auxiliar na formatação do formulário-->
@@ -44,17 +44,8 @@
                 <div>
                     <label for="pagLivro"> Número de Páginas: </label>
                     <input type="text" name="pagLivro" id="pagLivro">
-                </div>
-                    
-                <div>
-                    <label> Status: </label>
-                    <input type="radio" name="disponibilidadeLivro" id="livroDisponivel" value="Disponivel">
-                    <label for="livroDisponivel"> Disponível </label>
-
-                    <input type="radio" name="disponibilidadeLivro" id="livroIndisponivel" value="Indisponivel">
-                    <label for="livroIndisponivel"> Indisponível </label>
-                </div>
-            </fieldset>
+                </div>             
+             </fieldset>
             <br>
             <button type="submit">Enviar</button>
             <button type="reset">Limpar</button>
