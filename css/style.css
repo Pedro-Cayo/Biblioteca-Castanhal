@@ -1,0 +1,21 @@
+.mainpage-buttons {
+  text-align: center;
+}
+
+.buttons-large {
+  width: 200px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+  
+h1,h2,h3,h4,h5,h6 {
+  color: black;
+  text-align: center;
+}
+
+/* Espaçamento entre cada linha do formulário. 
+Serve apenas para <div> que estiver dentro de um fieldset. */
+fieldset div {
+  margin-bottom: 20px; 
+}
