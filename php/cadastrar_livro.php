@@ -16,10 +16,13 @@ $sql = "
 ";
 
 if (mysqli_query($conexao, $sql)){
-    echo "Livro cadastrado com sucesso";
-    header("location: ../index.html");
-} else {
-    echo "Erro ao cadastrar";
+    /* Exibe uma mensagem de sucesso e recarrega a página de cadastro */
+    echo "
+    <script>
+        alert('Livro cadastrado com sucesso!');
+        window.location.href = '../cadastrar_livro.html';
+    </script>
+    ";
 }
 
 ?>
