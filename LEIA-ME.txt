@@ -1,4 +1,6 @@
-PASSOS:
+OBS: No arquivo conexao.php usa-se a porta 3306 ou 3307 dependendo do computador.
+
+PASSOS para o funcionamento!!
 	1- Execute xampp control center
 	2- rode apache e MySQL
 	3- insira o arquivo do projeto na pasta "htdocs" localizada no local que voce optou por instalar o xampp (pdf aula_php detalha melhor se necessario(ta no sigaa))
@@ -6,3 +8,125 @@ PASSOS:
 	5- Clique em cadastrar livro e a aplicacao web deve criar uma database chamada "biblioteca_cast" AUTOMATICAMENTE
 	6- ???
 	7- se divirta
+
+PASSOS para o teste do banco de dados e da busca. Após fazer o passo 1. 
+Tendo o MySQL no computador e o database "biblioteca_cast" criado no passo 1:
+
+	1 - Vá até http://localhost/phpmyadmin/
+	2 - Selecione o banco de dados: biblioteca_cast
+	3 - Clique na tabela Livros.
+	4 - Vá na aba SQL no topo da página
+	5 - Cole o seguinte código na caixa de consulta:
+
+INSERT INTO livros (nome, autor, genero, editora, ano_lanc, n_pag) VALUES
+-- Fantasia e Ficção Científica (20)
+('O Último Sussurro de Elion', 'Alister Vance', 'Fantasia', 'Editora Mythos', 2021, 412),
+('Crônicas de um Sol Adormecido', 'Evelyn Thorne', 'Ficção Científica', 'Nova Fronteira', 2024, 389),
+('O Eco das Engrenagens', 'Arthur Pendelton', 'Steampunk', 'Relicário', 2019, 320),
+('A Rosa de Vidro', 'Seraphina Vance', 'Fantasia', 'Trama Sombria', 2023, 290),
+('Nebulosa Zero', 'Marcus Kael', 'Ficção Científica', 'Estelar', 2020, 450),
+('O Labirinto das Almas', 'Cassandra Black', 'Fantasia', 'Penumbra', 2018, 512),
+('Herdeiros do Vento', 'Dorian Greywood', 'Fantasia', 'Vento Forte', 2022, 340),
+('A Máquina de Escrever Estrelas', 'Lyra Belacqua', 'Ficção Científica', 'Cosmos', 2025, 275),
+('O Guardião do Tempo Perdido', 'Julian Drake', 'Fantasia', 'Ampulheta', 2021, 400),
+('Cidades Flutuantes de Arka', 'Talia Storm', 'Ficção Científica', 'Nuvem Alta', 2023, 315),
+('O Silêncio dos Dragões', 'Gideon Sterling', 'Fantasia', 'Asa de Fogo', 2017, 620),
+('A Teoria do Caos Reverso', 'Silas Finch', 'Ficção Científica', 'Quântica', 2024, 305),
+('O Portador da Luz Sombria', 'Kaelen Vance', 'Fantasia', 'Eclipse', 2022, 480),
+('Planeta de Ferro', 'Zora Vance', 'Ficção Científica', 'Siderúrgica', 2019, 365),
+('A Chave do Abismo', 'Morrison Drake', 'Fantasia', 'Profundeza', 2021, 425),
+('Sussurros de Andrômeda', 'Nova Aster', 'Ficção Científica', 'Infinito', 2026, 298),
+('O Castelo de Cinzas', 'Helena Crowley', 'Fantasia', 'Fênix', 2020, 390),
+('O Algoritmo do Destino', 'Cypher Jones', 'Ficção Científica', 'Digital', 2023, 330),
+('A Rainha Invisível', 'Elowen Green', 'Fantasia', 'Realeza', 2018, 350),
+('Crônicas do Vácuo', 'Orion Pax', 'Ficção Científica', 'Espacial', 2025, 415),
+
+-- Mistério, Suspense e Terror (20)
+('O Segredo da Mansão Blackwood', 'Verity Holmes', 'Mistério', 'Sombra Real', 2020, 310),
+('A Última Peça do Quebra-Cabeça', 'Jonathan Riddler', 'Suspense', 'Enigma', 2023, 285),
+('O Grito do Corvo', 'Edgar Thorne', 'Terror', 'Corvo Negro', 2019, 240),
+('Neblina na Estrada 13', 'Clara Smith', 'Mistério', 'Asfalto', 2021, 300),
+('O Colecionador de Sussurros', 'Victor Grendel', 'Suspense', 'Silêncio', 2022, 360),
+('A Sombra que Anda', 'Damian Dark', 'Terror', 'Penumbra', 2018, 420),
+('Pegadas na Neve Derretida', 'Freya Frost', 'Mistério', 'Ártico', 2024, 270),
+('O Labirinto Mental de Susan', 'Dr. Alistair Ross', 'Suspense Psicológico', 'Mente Livre', 2021, 345),
+('Ritual do Sétimo Dia', 'Father Thomas', 'Terror', 'Sacramento', 2023, 380),
+('O Caso do Relógio de Ouro', 'Sherwin Watson', 'Mistério', 'Lupa', 2017, 325),
+('Vozes no Sótão', 'Lenore Poe', 'Terror', 'Casarão', 2020, 295),
+('A Noite dos Espelhos Rotos', 'Mirella Glass', 'Suspense', 'Reflexo', 2022, 315),
+('O Mistério de Ravenscroft', 'Arthur Doyle III', 'Mistério', 'Sombra Real', 2019, 410),
+('O Farol Esquecido', 'Barnaby Anchor', 'Suspense', 'Maré', 2021, 280),
+('Pesadelos de Silício', 'Ada Loveless', 'Terror Tecnológico', 'Byte', 2025, 335),
+('A Garota que Não Estava Lá', 'Gillian Flynn Jr.', 'Suspense', 'Ilusão', 2023, 390),
+('Cinzas de um Crime', 'Jack Burn', 'Mistério', 'Brasa', 2018, 305),
+('O Canto da Serpente', 'Medusa Stone', 'Terror', 'Venenosa', 2024, 430),
+('O Passageiro do Trem da Meia-Noite', 'Winston Station', 'Suspense', 'Trilhos', 2022, 260),
+('A Cripta dos Segredos', 'Vincent Grave', 'Terror', 'Cemitério', 2020, 375),
+
+-- Romance e Drama (20)
+('Onde o Sol se Põe Primeiro', 'Sophia Laurent', 'Romance', 'Amor Doce', 2022, 312),
+('Cartas para um Destinatário Desconhecido', 'Nicholas Sparks Jr.', 'Romance', 'Postal', 2020, 280),
+('O Som da Chuva no Vidro', 'Beatriz Antunes', 'Drama', 'Lágrima', 2021, 340),
+('Promessas de Outono', 'Julianne Green', 'Romance', 'Folhas Secas', 2023, 295),
+('O Café da Esquina', 'Emily Carter', 'Romance', 'Grão de Ouro', 2019, 250),
+('A Distância Entre Nós', 'Lucas Mendes', 'Drama', 'Fronteira', 2024, 380),
+('Sinfonia de um Amor Imperfeito', 'Clara Schumann II', 'Romance', 'Harmonia', 2018, 310),
+('O Caderno de Desenhos Azuis', 'Skye Blue', 'Drama', 'Paleta', 2022, 270),
+('Estações do Coração', 'Autumn Rivers', 'Romance', 'Quatro Climas', 2021, 330),
+('O Que Ficou por Dizer', 'Thomas Whisper', 'Drama', 'Eco', 2023, 365),
+('O Baile de Máscaras de Veneza', 'Isabella Donati', 'Romance Histórico', 'Gôndola', 2017, 450),
+('A Última Melodia de Chopin', 'Amadeus Liszt', 'Drama', 'Partitura', 2020, 290),
+('Amor em Tempos de Algoritmo', 'Tinder Bell', 'Romance Moderno', 'Conexão', 2025, 265),
+('O Retrato de Elisa', 'Dante Alighieri Jr.', 'Drama', 'Moldura', 2019, 320),
+('Sob a Luz dos Vagalumes', 'Luna Light', 'Romance', 'Noite Escura', 2022, 300),
+('Cicatrizes de Papel', 'Oliver Page', 'Drama', 'Livraria', 2023, 315),
+('A Promessa do Faroleiro', 'Marina Bay', 'Romance', 'Oceano', 2018, 340),
+('O Restaurante dos Corações Partidos', 'Chef Pierre', 'Romance Comédia', 'Tempero', 2024, 285),
+('Lembranças de uma Vida Antiga', 'Arthur Memoir', 'Drama', 'Baú', 2021, 370),
+('O Fio Invisível do Destino', 'Mei Ling', 'Romance', 'Seda', 2020, 325),
+
+-- Aventura e Ação (20)
+('A Busca pelo El Dorado Negro', 'Indiana Carter', 'Aventura', 'Bússola', 2021, 395),
+('O Templo do Sol de Ferro', 'Lara Croft Jr.', 'Aventura', 'Relíquia', 2023, 410),
+('Alvo em Movimento', 'Vince Trigger', 'Ação', 'Miras', 2020, 280),
+('O Tesouro da Ilha dos Corvos', 'Captain Flint II', 'Aventura', 'Marés', 2019, 350),
+('Código Vermelho: Invasão', 'Tom Clancy Jr.', 'Ação', 'Militar', 2024, 460),
+('O Último Voo do Albatroz', 'Amelia Sky', 'Aventura', 'Asas', 2018, 320),
+('Perseguição na Selva de Pedra', 'Rico Street', 'Ação', 'Asfalto', 2022, 295),
+('O Enigma das Runas Nórdicas', 'Bjorn Ironside Jr.', 'Aventura', 'Machado', 2021, 380),
+('Operação Fênix', 'Sarah Connor Jr.', 'Ação', 'Fogo', 2023, 340),
+('A Expedição Proibida', 'Dr. David Explorer', 'Aventura', 'Mapa', 2017, 405),
+('Sem Limites para Correr', 'Jack Fast', 'Ação', 'Velocidade', 2020, 270),
+('O Segredo das Cordilheiras', 'Yeti Hunter', 'Aventura', 'Gelo', 2022, 335),
+('Infiltrado na Tríade', 'Wei Shen Jr.', 'Ação', 'Dragão', 2025, 415),
+('Os Caçadores da Arca Perdida II', 'Henry Jones III', 'Aventura', 'Chicote', 2019, 365),
+('Fuga de Alcatraz Reverso', 'Michael Scofield Jr.', 'Ação', 'Grades', 2021, 310),
+('O Mistério da Cidade Perdida', 'Zelda Link', 'Aventura', 'Triforce', 2024, 425),
+('Vingança nas Sombras', 'John Wick Jr.', 'Ação', 'Lápis', 2023, 300),
+('O Desbravador dos Sete Mares', 'Sinbad Cook', 'Aventura', 'Velas', 2018, 385),
+('Ameaça Global', 'James Bond Jr.', 'Ação', 'Smoking', 2022, 350),
+('A Corrida pelo Diamante Azul', 'Jewel Thief', 'Aventura', 'Lapidado', 2020, 290),
+
+-- Não-Ficção (Fictícia/Satírica), Desenvolvimento Pessoal e Outros (20)
+('Como Treinar seu Computador', 'Byte Master', 'Desenvolvimento Pessoal', 'TecnoLife', 2025, 210),
+('Guia de Sobrevivência ao Apocalipse Zumbi', 'Rick Grimes Jr.', 'Sobrevivência', 'Machadinha', 2020, 195),
+('A Arte de Dormir 8 Horas', 'Sandman Sleeper', 'Saúde', 'Travesseiro', 2022, 240),
+('Culinária para Quem Odeia Cozinhar', 'Chef Ramshackle', 'Gastronomia', 'Microondas', 2019, 180),
+('O Poder do Pensamento Quântico Bobo', 'Dr. Brain Wave', 'Sátira', 'Piada', 2023, 220),
+('Finanças para Quem Não Tem Dinheiro', 'Will Broke', 'Finanças', 'Bolsa Vazia', 2021, 255),
+('Como Viajar no Tempo Sem Destruir o Universo', 'Doc Brown Jr.', 'Ciência Fictícia', 'Delorean', 2024, 310),
+('A Psicologia dos Gatos Domésticos', 'Meow Whispers', 'Comportamento Animal', 'Fio de Lã', 2018, 175),
+('Manual do Detetive Amador', 'Sherlock Jr.', 'Investigação', 'Lupa', 2022, 230),
+('O Livro que Muda de Opinião', 'Chameleon Author', 'Filosofia', 'Mutante', 2021, 320),
+('Como Ser um Super-Herói de Escritório', 'Clark Kent Jr.', 'Desenvolvimento Pessoal', 'Capa Invisível', 2020, 205),
+('Guia Prático de Jardinagem Espacial', 'Mark Watney Jr.', 'Ciência Fictícia', 'Batata', 2023, 290),
+('A História Secreta dos Unicórnios', 'Dr. Pegasus', 'Mitologia', 'Arco-Íris', 2017, 340),
+('Como Fazer Amigos Entre Extraterrestres', 'E.T. Phone Home', 'Comunicação', 'Antena', 2025, 215),
+('A Arte de Evitar Pessoas no Elevador', 'Introvert Champion', 'Desenvolvimento Pessoal', 'Porta Fechada', 2019, 150),
+('O Segredo das Múmias Modernas', 'Tutankhamun III', 'História Fictícia', 'Atadura', 2021, 280),
+('Meditação para Mentes Barulhentas', 'Guru Calm', 'Espiritualidade', 'Lótus', 2022, 190),
+('Como Hackear a Realidade', 'Neo Matrix', 'Filosofia', 'Pílula Vermelha', 2024, 305),
+('O Guia Definitivo do Mochileiro de Castanhal', 'Douglas Adams Jr.', 'Ficção Científica', 'Toalha', 2023, 225),
+('A Ciência do Café Perfeito', 'Caffeine Overlord', 'Gastronomia', 'Expresso', 2020, 200);
+
+	6 - Clique em Executar ou "Go" no canto inferior direito.
