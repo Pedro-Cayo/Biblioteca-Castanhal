@@ -49,7 +49,8 @@ que o arquivo index.html esta no diretorio acima dele
                     </a>
                 </td>
                 <td>
-                    <a href="excluir_livro.php?id=<?php echo $linha['id']; ?>">
+                    <a href="excluir_livro.php?id=<?php echo $linha['id']; ?>"
+                    onclick="return confirm('Tem certeza que deseja excluir este livro?');">  
                         EXCLUIR
                     </a>
                 </td>
