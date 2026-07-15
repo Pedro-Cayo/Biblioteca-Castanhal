@@ -1,0 +1,8 @@
+PASSOS:
+	1- Execute xampp control center
+	2- rode apache e MySQL
+	3- insira o arquivo do projeto na pasta "htdocs" localizada no local que voce optou por instalar o xampp (pdf aula_php detalha melhor se necessario(ta no sigaa))
+	4- acesse "localhost/biblioteca_cast" no seu navegador
+	5- Clique em cadastrar livro e a aplicacao web deve criar uma database chamada "biblioteca_cast" AUTOMATICAMENTE
+	6- ???
+	7- se divirta
