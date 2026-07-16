@@ -1,7 +1,7 @@
 body {
   position: relative;
   margin: 0;
-  background-image: url('../vermelho_creme.svg');
+  background-image: url('../imagens/vermelho_creme.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url('../fundoTransparente.png');
+  background-image: url('../imagens/fundoTransparente.png');
   background-repeat: repeat;
   background-size: 600px auto;
   opacity: 0.12;
