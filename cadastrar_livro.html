@@ -1,54 +1,61 @@
-<!DOCTYPE hmtl>
+<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <title> Cadastrando_Livro </title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css?v=2">
     </head>
-
+    
+    <body>
         <a href="index.html">
             <button type="button">Voltar ao Início</button>
         </a>
 
-    <body>
-        <h1>Novo Livro</h1>
-        <form action="php/cadastrar_livro.php" method="post"> 
-            <fieldset>
-                <legend><strong> Informações Cadastrais </strong></legend>
-                <!--Utilizei <div> somada a uma configuração no arquivo css para auxiliar na formatação do formulário-->
-                <div>
-                    <label for="nomeLivro"> Nome do livro: </label>
-                    <input type="text" name="nomeLivro" id="nomeLivro">
-                </div>
+        <div class="conteudo-pagina">
+            <h1>Novo Livro</h1>
+            
+            <form action="php/cadastrar_livro.php" method="post" onsubmit="return validaForm()"> 
+                 <fieldset>
+                    <legend><strong> Informações Cadastrais </strong></legend>
+                    
+                    <div>
+                        <label for="nomeLivro"> Nome do livro: </label>
+                        <input type="text" name="nomeLivro" id="nomeLivro">
+                    </div>
 
-                <div>                   
-                    <label for="nomeAutor"> Autor(a): </label>
-                    <input type="text" name="nomeAutor" id="nomeAutor">
-                </div>
+                    <div>                   
+                        <label for="nomeAutor"> Autor(a): </label>
+                        <input type="text" name="nomeAutor" id="nomeAutor">
+                    </div>
 
-                <div>
-                    <label for="generoLivro"> Gênero: </label>
-                    <input type="text" name="generoLivro" id="generoLivro">
-                </div> 
+                    <div>
+                        <label for="generoLivro"> Gênero: </label>
+                        <input type="text" name="generoLivro" id="generoLivro">
+                    </div> 
 
-                <div>
-                    <label for="editoraLivro"> Editora: </label>
-                    <input type="text" name="editoraLivro" id="editoraLivro">
-                </div>
-               
-                <div>
-                    <label for="anoLivro"> Ano de Lançamento: </label>
-                    <input type="text" name="anoLivro" id="anoLivro">
-                </div>
+                    <div>
+                        <label for="editoraLivro"> Editora: </label>
+                        <input type="text" name="editoraLivro" id="editoraLivro">
+                    </div>
+                    
+                    <div>
+                        <label for="anoLivro"> Ano de Lançamento: </label>
+                        <input type="text" name="anoLivro" id="anoLivro">
+                    </div>
+                    
+                    <div>
+                        <label for="pagLivro"> Número de Páginas: </label>
+                        <input type="text" name="pagLivro" id="pagLivro">
+                    </div>             
+                </fieldset>
                 
-                <div>
-                    <label for="pagLivro"> Número de Páginas: </label>
-                    <input type="text" name="pagLivro" id="pagLivro">
-                </div>             
-             </fieldset>
-            <br>
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
-        </form>
+                <br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                <br>
+                
+            </form>
+
+        </div> <script src="js/validacao.js"></script>
     </body>
 </html>
