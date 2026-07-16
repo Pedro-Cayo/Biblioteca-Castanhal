@@ -1,17 +1,17 @@
-<!DOCTYPE hmtl>
+<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <title> Cadastrando_Livro </title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-        <a href="index.html">
-            <button type="button">Voltar ao Início</button>
-        </a>
     <body>
+        <a href="index.html">
+            <button type="button"> Voltar ao Início </button>
+        </a>
         <h1>Novo Livro</h1>
         <form action="php/cadastrar_livro.php" method="post"
-        onsubmit="return validaForm()"> 
+        onsubmit="return validaForm()"> <!--Chamada da função de validação-->
             <fieldset>
                 <legend><strong> Informações Cadastrais </strong></legend>
                 <!--Utilizei <div> somada a uma configuração no arquivo css para auxiliar na formatação do formulário-->
@@ -46,9 +46,10 @@
                 </div>             
              </fieldset>
             <br>
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
+            <button type="submit"> Enviar </button>
+            <button type="reset" 
+            onclick="return confirm('Deseja limpar os dados inseridos?')"> Limpar </button> 
         </form>
-        <script src="js/validacao.js"></script>
+        <script src="js/validacao.js"></script> <!--Carrega o arquivo com a função de validação-->
     </body>
 </html>
